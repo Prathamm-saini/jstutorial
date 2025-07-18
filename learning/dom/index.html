@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dom learning</title>
+  <style>
+    .bg_black {
+      background-color:black;
+    }
+    .heading {
+      background-color: bisque;
+    }
+  </style>
+</head>
+<body class="bg_black" id="title">
+  <div>
+    <h1 class="heading">DOM learning</h1>
+    <h2>DOM DOM</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, eum?</p>
+    <input type="password" id="pass" name="Enter Password" placeholder="enter password">
+    <button id ="submit-button">Submit</button>
+    <ul>
+        <li class="list-item">mango</li>
+        <li class="list-item">apple</li>
+        <li class="list-item">pomegranate</li>
+    </ul>
+  </div>
+  <script>
+    const titleElement = document.getElementById('title');
+    titleElement.style.backgroundColor = 'lightblue';
+    title.style.padding = "15px"
+    title.style.borderRadius = "15px"
+  </script>
+</body>
+</html>

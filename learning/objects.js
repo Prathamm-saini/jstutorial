@@ -44,9 +44,32 @@ console.log(typeof mySymbol)// now its symbol only
 // how to change value
 // only use dot operator here
 jsUser.age = 22
-Object.freeze(jsUser) // freeze the object cant be changed now
+//Object.freeze(jsUser) // freeze the object cant be changed now
 jsUser.age = 21
 console.log(jsUser);
 
 
-// in js you can treat variables cd
+// in js you can treat functions as variables
+// so you can add functions to objects as well
+jsUser.greet = function(){
+    console.log("Congrats on learning objects in js")
+}
+jsUser.greeting = function(){
+    console.log("hello js user",`${this.name}`);
+ // this keyword refers to object properties    
+}
+
+console.log(jsUser.greet()); // value + undefinded
+console.log(jsUser.greet); // function anonymous
+// function is not executed here just we get reference to it 
+
+console.log(jsUser.greeting());
+// this refers to object itself
+
+
+// always remember we generally use dot operator to acess properties 
+// but if the key is not a valid js identifies
+// like symbols etc then have to use [] operator
+// jsUser["fullname"]//valid
+
+

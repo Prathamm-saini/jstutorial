@@ -1,0 +1,74 @@
+how does code executes in java script
+
+1.Javascript execution context
+(meaning how js execute the file i.e run it )
+js file -> global execution context (this refers this)
+* every environment has different execution context
+therefore node had different and browser engine has different
+
+all of this executed as threads ( parts of a process)
+
+** js is single threaded langauge -> everything is run as process
+
+there are three types of exec context
+1. global 2. function 3. eval
+
+
+/ how code executes
+js source code -> 
+1. memory creation phase 
+(no mathematical/logical operation is done here only memory is allocated for variables objects and function)
+
+2. execution phase
+logical operation is perfromed here
+
+
+//
+code snippet
+let  val1= 10 
+let var2=5
+func addnum(num1,num2){
+    let total= num1+num2
+    return total
+
+}
+let result1=addnum(val1+val2)
+let result2 = addNum(10,2)
+
+how this executes
+
+1. global execution context created and allocated to this
+
+2. memory creation phase - val1 and val2 are stored in memeory as undefined and addNum func also gets stored in memory as func defination
+result 1 and result 2 also stored  as undefined
+
+3.execution phase
+val1<-10 val2<-5
+as addNum gets called in exec phase it creates its
+own new variable environment + execution thread
+(**each time a func is called this happens i.e a new execution context is created**)
+[ memory phase for this func (addNum)
+val1,val2 -> undefined
+total-> undefined
+
+execution context
+num1 = 10 num2=5
+total = 15
+returns to global execution context and this functions execution syntax moves out from stack (simialr to recurison)
+]
+
+result1 = 15
+result 2= addNum(val1,val2) -> again here we go again
+again memroy exextion phase etc is done and returned to global exec context
+
+
+
+
+CALL STACK [lifo principle]
+stack shaped
+
+whenever program initiates global exex context is created and goes into the stack 
+if method one() two() three() is there in file
+and two is inside one and three is inside two
+
+1. three gets popped then two then one then global exex context (lifo)
