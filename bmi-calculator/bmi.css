@@ -1,0 +1,25 @@
+* {
+  margin: 10px;
+  padding: 10px;
+}
+
+.main_heading {
+  text-align: center;
+  color: beige;
+  background-color: lightcoral;
+}
+
+.height,
+.weight {
+  border-radius: 8px;
+}
+
+.weight_guide {
+  background-color: lightcoral;
+  padding: 10px;
+}
+
+.result {
+  color: lightcoral;
+  font-weight: bold;
+}
